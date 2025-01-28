@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
-
+//A class which manages our main Menu screen
 public class MainMenu : MonoBehaviour
 {
     private string currentPlace;
