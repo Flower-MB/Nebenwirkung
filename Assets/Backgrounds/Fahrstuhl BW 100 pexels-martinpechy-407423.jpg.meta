@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9f17802d665a1204694784eb6f94659c
+guid: d664b9f604173d44695a5d5e07f7d750
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7355852377095780805
-    second: Fahrstuhl 100 BW Capradi Flickl_com 1_0
+      213: 2620299257142004925
+    second: Fahrstuhl BW 100 pexels-martinpechy-407423_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fahrstuhl 100 BW Capradi Flickl_com 1_0
+      name: Fahrstuhl BW 100 pexels-martinpechy-407423_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2767
-        height: 2416
+        width: 3456
+        height: 5184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c9b10593cc351660800000000000000
-      internalID: 7355852377095780805
+      spriteID: dbc4b2b9a4c2d5420800000000000000
+      internalID: 2620299257142004925
       vertices: []
       indices: 
       edges: []

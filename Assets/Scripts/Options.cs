@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Options : MonoBehaviour
 {
+    //Sound Options with slider
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
     public void SetMusicVolume()

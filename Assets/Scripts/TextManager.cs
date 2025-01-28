@@ -1,13 +1,20 @@
+using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    public Sanity sanity;
-    public int currentMood;
-    
-    public string SetText(string place, int currentMood)
+    public TextMeshProUGUI descriptionTextBox;
+    private string descriptiontext = "";
+
+    public void changeTextBox()
     {
-        string descriptiontext = "";
+        SetText(ValueToKeep.placeToKeep, ValueToKeep.moodToKeep);
+        descriptionTextBox.text = descriptiontext;
+    }
+    public string SetText(string place, uint currentMood)
+    {
+
         // A nested switch statement containing two parameters: place & currentMood
         switch (place)
         {
@@ -269,8 +276,114 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         break;
                 }
                 break;
+            case "Medical Base":
+                switch (currentMood)
+                {
+                    case 1:
+                        descriptiontext = "*";
+                        ;
+                        break;
+                    case 2:
+                        descriptiontext = "**";
+                        break;
+                    case 3:
+                        descriptiontext = "***";
+                        break;
+                }
+                break;
+            //Chapter 3
+            case "Reception":
+                switch (currentMood)
+                {
+                    case 1:
+                        descriptiontext = "\"The most realistic Escape-Room: 'Sideeffects guaranteed'\" Hier habe ich bezahlt, um den Spaß meines Lebens zu haben.";
+                        ;
+                        break;
+                    case 2:
+                        descriptiontext = "Eingang oder Ausgang, das ist hier Frage.";
+                        break;
+                    case 3:
+                        descriptiontext = "Die haben die Anweisung, mich nicht rauszulassen.";
+                        break;
+                }
+                break;
+            //The Office is first locked and eventually unlocked
+            case "Office*":
+                switch (currentMood)
+                {
+                    case 1:
+                        descriptiontext = "\"Zutritt nur für Personal\"";
+                        ;
+                        break;
+                    case 2:
+                        descriptiontext = "\"Zutritt nur für Personal der psychiatrischen Einrichtung\"";
+                        break;
+                    case 3:
+                        descriptiontext = "\"Zutritt nur für Mitverschwörer\"";
+                        break;
+                }
+                break;
+            case "Office":
+                switch (currentMood)
+                {
+                    case 1:
+                        descriptiontext = "Ein langweiliger, geordneter Schreibtisch. Dahinter mehrere Bildschirme, auf denen ich mehrere Teilnehmer entdecke.";
+                        ;
+                        break;
+                    case 2:
+                        descriptiontext = "Hinter einem bulligen Typen sehe ich eine Wand mit Überwachungsbildschirmen.";
+                        break;
+                    case 3:
+                        descriptiontext = "Eine Glatzkopf in einer Uniform, an dessen Gürtel eine Waffe hängt.";
+                        break;
+                }
+                break;
+            case "Vending Machine":
+                switch (currentMood)
+                {
+                    case 1:
+                        descriptiontext = "Ein simpler Snackautomat, der regelmäßig nachgefüllt wird. Ich kann einige gewöhnliche Snacks erkennen.";
+                        break;
+                    case 2:
+                        descriptiontext = "Ein mysteriöser Snackautomat, der schon lange nicht mehr nachgefüllt wurde.";
+                        break;
+                    case 3:
+                        descriptiontext = "Ein interessanter Snackautomat, in dem man abgetrennte Körperteile kaufen kann. Der Verwesungsgeruch steigt in meine Nase.";
+                        break;
+                }
+                break;
+            case "Exit":
+                switch (currentMood)
+                {
+                    case 1:
+                        descriptiontext = "Endlich Draußen!";
+                        break;
+                    case 2:
+                        descriptiontext = "Ich lebe noch!";
+                        break;
+                    case 3:
+                        descriptiontext = "Unmöglich!";
+                        break;
+                }
+                break;
         }
         //returning the eveluated description
         return descriptiontext;
+
     }
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        SetText(ValueToKeep.placeToKeep, ValueToKeep.moodToKeep);
+        changeTextBox();
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        SetText(ValueToKeep.placeToKeep, ValueToKeep.moodToKeep);
+        changeTextBox();
+    }
+
 }

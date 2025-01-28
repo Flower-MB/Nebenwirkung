@@ -8,12 +8,12 @@ public class Sanity : MonoBehaviour
 {
     //Sanity
     private uint currentSanity = 0;
-    public uint currentMood = 0;
+    public uint currentMood = 1;
     private uint maxSanity;
     private uint newSanity;
     public Slider sanityBar;
     
-    //UI imput
+    //UI imput through Unity
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI uiTextTwo;
     public TextMeshProUGUI uiTextThree;
@@ -46,6 +46,7 @@ public class Sanity : MonoBehaviour
     public Button hideButtonSeven;
     public Button hideButtonEight;
     
+    //To keep the current Sanity through all Scenes.
     private void SaveSanity ()
     {
         ValueToKeep.sanityToKeep = currentSanity;
@@ -54,14 +55,29 @@ public class Sanity : MonoBehaviour
     {
         ValueToKeep.moodToKeep = currentMood;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    //Sanity Reset
+    public void SanityReset()
     {
-        currentSanity = ValueToKeep.sanityToKeep;
-        currentMood = ValueToKeep.moodToKeep;
-        maxSanity = 100;
+        currentSanity = 0;
         sanityBar.value = currentSanity;
-        sanityBar.maxValue = maxSanity;
+        SaveSanity();
+        SetMood();
+        UpdateUI();
+    }
+    public void SanityResetChapterTwo()
+    {
+        currentSanity = 20;
+        sanityBar.value = currentSanity;
+        SaveSanity();
+        SetMood();
+        UpdateUI();
+    }
+    public void SanityResetChapterThree()
+    {
+        currentSanity = 40;
+        sanityBar.value = currentSanity;
+        SaveSanity();
         SetMood();
         UpdateUI();
     }
@@ -113,48 +129,57 @@ public class Sanity : MonoBehaviour
         SetMood();
         UpdateUI();
     }
+    public void SanityRegain()
+    {
+        newSanity = currentSanity - 4;
+        currentSanity = newSanity;
+        sanityBar.value = currentSanity;
+        SaveSanity();
+        SetMood();
+        UpdateUI();
+    }
 
     //Set Character Mood
     public void SetMood()
     {
         if (currentSanity <= 50)
         {
-            currentMood = 0;
+            currentMood = 1;
         }
         else if (currentSanity > 50 && currentSanity <= 75)
         {
-            currentMood = 1;
+            currentMood = 2;
         }
         else if (currentSanity > 75 && currentSanity < 100)
         {
-            currentMood = 2;
+            currentMood = 3;
         }
         else
         {
-            currentMood = 3;
+            currentMood = 4;
         }
         SaveMood();
         UpdateUI();
     }
-    //Actualise the UI
+    //Update the UI to new Font
     public void UpdateUI()
     {
-        if (currentMood == 0)
+        if (currentMood == 1)
         {
 
             descriptionText.font = fontMoodOne;
         }
-        else if (currentMood == 1)
+        else if (currentMood == 2)
         {
             descriptionText.font = fontMoodTwo;
         }
-        else if (currentMood == 2)
+        else if (currentMood == 3)
         {
             descriptionText.font = fontMoodThree;
         }
-        else if (currentMood == 3)
+        else if (currentMood == 4)
         {
-
+            //If player Reaches this Mood he should only be able  to use a certain button!
             descriptionText.font = fontMoodThree;
             hideButtonOne.gameObject.SetActive(false);
             hideButtonTwo.gameObject.SetActive(false);
@@ -173,9 +198,25 @@ public class Sanity : MonoBehaviour
         
 
     }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        currentSanity = ValueToKeep.sanityToKeep;
+        currentMood = ValueToKeep.moodToKeep;
+        maxSanity = 100;
+        //Sanity Bar updating
+        sanityBar.value = currentSanity;
+        sanityBar.maxValue = maxSanity;
+        //Updating Mood + UI
+        SetMood();
+        UpdateUI();
+    }
     // Update is called once per frame
     void Update()
     {
-
+        sanityBar.value = currentSanity;
+        sanityBar.maxValue = maxSanity;
+        SetMood();
+        UpdateUI();
     }
 }

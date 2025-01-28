@@ -2204,6 +2204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlace: Awakening Room
   descriptionText: {fileID: 0}
 --- !u!1 &554475144
 GameObject:
@@ -2351,6 +2352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614863739}
   - component: {fileID: 614863740}
+  - component: {fileID: 614863743}
   - component: {fileID: 614863741}
   - component: {fileID: 614863742}
   m_Layer: 0
@@ -2406,6 +2408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce067e36be919824e99399cdebf92d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMood: 0
   sanityBar: {fileID: 1043752486}
   descriptionText: {fileID: 1125928753}
   uiTextTwo: {fileID: 1679709176}
@@ -2448,7 +2451,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlace: Awakening Room
   descriptionText: {fileID: 0}
+--- !u!114 &614863743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614863738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc29942057b19ce489b7ec7c5686175c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionTextBox: {fileID: 1125928753}
 --- !u!1 &669847501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +2977,7 @@ GameObject:
   - component: {fileID: 799091563}
   - component: {fileID: 799091562}
   - component: {fileID: 799091565}
+  - component: {fileID: 799091566}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3085,6 +3103,103 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!82 &799091566
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799091561}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1056422879015634889, guid: 01c9c3127cf29094c954dc157c5dd3d3, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0309e03792e3a684d9db1a53e9ea245d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0309e03792e3a684d9db1a53e9ea245d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1021.0708
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &799955286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,6 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce067e36be919824e99399cdebf92d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMood: 0
   sanityBar: {fileID: 0}
   descriptionText: {fileID: 0}
   uiTextTwo: {fileID: 0}
@@ -3606,6 +3722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce067e36be919824e99399cdebf92d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMood: 0
   sanityBar: {fileID: 0}
   descriptionText: {fileID: 0}
   uiTextTwo: {fileID: 0}
@@ -4402,7 +4519,6 @@ GameObject:
   - component: {fileID: 1182205319}
   - component: {fileID: 1182205318}
   - component: {fileID: 1182205317}
-  - component: {fileID: 1182205320}
   m_Layer: 5
   m_Name: Interaction 1
   m_TagString: Untagged
@@ -4473,7 +4589,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1182205318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 614863741}
+        m_TargetAssemblyTypeName: Sanity, Assembly-CSharp
+        m_MethodName: SanityLossMinimum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1837298411}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 614863743}
+        m_TargetAssemblyTypeName: NewMonoBehaviourScript, Assembly-CSharp
+        m_MethodName: changeTextBox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1182205318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4512,48 +4664,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182205315}
   m_CullTransparentMesh: 1
---- !u!114 &1182205320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182205315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce067e36be919824e99399cdebf92d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sanityBar: {fileID: 0}
-  descriptionText: {fileID: 0}
-  uiTextTwo: {fileID: 0}
-  uiTextThree: {fileID: 0}
-  uiTextFour: {fileID: 0}
-  uiTextFive: {fileID: 0}
-  uiTextSix: {fileID: 0}
-  uiTextSeven: {fileID: 0}
-  uiTextEight: {fileID: 0}
-  uiTextNine: {fileID: 0}
-  uiTextTen: {fileID: 0}
-  uiTextEleven: {fileID: 0}
-  uiTextTwelve: {fileID: 0}
-  uiTextThirteen: {fileID: 0}
-  uiTextForteen: {fileID: 0}
-  uiTextFifthteen: {fileID: 0}
-  uiTextSixteen: {fileID: 0}
-  uiTextSeventeen: {fileID: 0}
-  uiTextEighteen: {fileID: 0}
-  fontMoodOne: {fileID: 0}
-  fontMoodTwo: {fileID: 0}
-  fontMoodThree: {fileID: 0}
-  hideButtonOne: {fileID: 0}
-  hideButtonTwo: {fileID: 0}
-  hideButtonThree: {fileID: 0}
-  hideButtonFour: {fileID: 0}
-  hideButtonFive: {fileID: 0}
-  hideButtonSix: {fileID: 0}
-  hideButtonSeven: {fileID: 0}
-  hideButtonEight: {fileID: 0}
 --- !u!1 &1202331945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,6 +5309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlace: Awakening Room
   descriptionText: {fileID: 0}
 --- !u!1 &1363688484
 GameObject:
@@ -5597,6 +5708,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 614863741}
+        m_TargetAssemblyTypeName: Sanity, Assembly-CSharp
+        m_MethodName: SanityLossMinimum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6510,7 +6633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1837298412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6578,6 +6701,18 @@ MonoBehaviour:
       - m_Target: {fileID: 614863742}
         m_TargetAssemblyTypeName: LocationManager, Assembly-CSharp
         m_MethodName: BasmentCorridor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 614863741}
+        m_TargetAssemblyTypeName: Sanity, Assembly-CSharp
+        m_MethodName: SanityLossMinimum
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

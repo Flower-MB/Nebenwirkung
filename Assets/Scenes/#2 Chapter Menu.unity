@@ -129,6 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 332588431}
   - component: {fileID: 332588432}
+  - component: {fileID: 332588433}
+  - component: {fileID: 332588434}
   m_Layer: 0
   m_Name: Option Menu
   m_TagString: Untagged
@@ -167,6 +169,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da48047ad95e41b4a91d8e444bddc341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &332588433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332588430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce067e36be919824e99399cdebf92d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMood: 0
+  sanityBar: {fileID: 0}
+  descriptionText: {fileID: 0}
+  uiTextTwo: {fileID: 0}
+  uiTextThree: {fileID: 0}
+  uiTextFour: {fileID: 0}
+  uiTextFive: {fileID: 0}
+  uiTextSix: {fileID: 0}
+  uiTextSeven: {fileID: 0}
+  uiTextEight: {fileID: 0}
+  uiTextNine: {fileID: 0}
+  uiTextTen: {fileID: 0}
+  uiTextEleven: {fileID: 0}
+  uiTextTwelve: {fileID: 0}
+  uiTextThirteen: {fileID: 0}
+  uiTextForteen: {fileID: 0}
+  uiTextFifthteen: {fileID: 0}
+  uiTextSixteen: {fileID: 0}
+  uiTextSeventeen: {fileID: 0}
+  uiTextEighteen: {fileID: 0}
+  fontMoodOne: {fileID: 0}
+  fontMoodTwo: {fileID: 0}
+  fontMoodThree: {fileID: 0}
+  hideButtonOne: {fileID: 0}
+  hideButtonTwo: {fileID: 0}
+  hideButtonThree: {fileID: 0}
+  hideButtonFour: {fileID: 0}
+  hideButtonFive: {fileID: 0}
+  hideButtonSix: {fileID: 0}
+  hideButtonSeven: {fileID: 0}
+  hideButtonEight: {fileID: 0}
+--- !u!114 &332588434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332588430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlace: Awakening Room
 --- !u!1 &458708417
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,9 +444,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 332588432}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayChapterThree
+      - m_Target: {fileID: 332588434}
+        m_TargetAssemblyTypeName: LocationManager, Assembly-CSharp
+        m_MethodName: GroundFloorCorridor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 332588433}
+        m_TargetAssemblyTypeName: Sanity, Assembly-CSharp
+        m_MethodName: SanityResetChapterThree
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -519,9 +589,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 332588432}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayChapterTwo
+      - m_Target: {fileID: 332588434}
+        m_TargetAssemblyTypeName: LocationManager, Assembly-CSharp
+        m_MethodName: FirstFloorCorridor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 332588433}
+        m_TargetAssemblyTypeName: Sanity, Assembly-CSharp
+        m_MethodName: SanityResetChapterTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1010,8 +1092,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 332588431}
   - {fileID: 1033587010}
+  - {fileID: 332588431}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1473,6 +1555,18 @@ MonoBehaviour:
       - m_Target: {fileID: 332588432}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 332588433}
+        m_TargetAssemblyTypeName: Sanity, Assembly-CSharp
+        m_MethodName: SanityReset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

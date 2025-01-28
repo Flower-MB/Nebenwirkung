@@ -1,23 +1,19 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private string currentPlace;
+    //Navigating to certain Unity Scenes
     public void ReturnMainMenu ()
     {
+        ValueToKeep.sanityToKeep = 0;
         SceneManager.LoadSceneAsync(0);
     }
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
-    }
-    public void PlayChapterTwo()
-    {
-        SceneManager.LoadSceneAsync(4);
-    }
-    public void PlayChapterThree()
-    {
-        SceneManager.LoadSceneAsync(5);
     }
     public void PickChapter()
     {
@@ -27,6 +23,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(3);
     }
+    //Ending the Game
     public void QuitGame()
     {
         Application.Quit();

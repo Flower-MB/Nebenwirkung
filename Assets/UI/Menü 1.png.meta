@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Men\xFC 1_0": -6601468464164643115
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

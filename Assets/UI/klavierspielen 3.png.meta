@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      klavierspielen 3_0: 1852986426928579316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

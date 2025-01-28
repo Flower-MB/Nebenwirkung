@@ -6,7 +6,14 @@ using TMPro;
 
 public class LocationManager : MonoBehaviour
 {
-    
+    public string currentPlace = "Awakening Room";
+
+    private void SaveCurrentPlace()
+    {
+        ValueToKeep.placeToKeep = currentPlace;
+    }
+
+    /*Locations with descriptions (old) still in the script for eventual use:
     Dictionary<string, List<string>> descriptionMoods = new Dictionary<string, List<string>>();
     [SerializeField] TextMeshProUGUI descriptionText;
 
@@ -14,7 +21,7 @@ public class LocationManager : MonoBehaviour
     {
           descriptionMoods[location] = description;
     }
-
+    
     public void DisplayText(string location, int currentMood)
     {
         if (descriptionMoods.ContainsKey(location))
@@ -28,6 +35,8 @@ public class LocationManager : MonoBehaviour
    
     static void Main(string[] args)
     {
+        
+         * 
         LocationManager locationManager = new LocationManager();
         
         //Chapter 1
@@ -170,100 +179,143 @@ public class LocationManager : MonoBehaviour
         locationManager.DisplayText("Getränke Automat", 0);
         locationManager.DisplayText("Getränke Automat", 1);
         locationManager.DisplayText("Getränke Automat", 2);
-
-    }
-
-
+        
+}*/
 
     //Chapter 1 Room Loading
     public void AwakeningRoom()
     {
+        currentPlace = "Awakening Room";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(1);
+
     }
     public void BasmentCorridor()
     {
+        currentPlace = "Basement Corridor";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(7);
     }
     public void Elevator() 
     {
+        currentPlace = "Elevator";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(6);
     }
     public void EngineRoom()
     {
+        currentPlace = "Engine Room";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(8);
     }
     public void FuseBox()
     {
+        currentPlace = "Fuse Box";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(9);
     }
     public void Lounge()
     {
+        currentPlace = "Lounge";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(10);
     }
     public void Piano()
     {
+        currentPlace = "Piano";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(11);
     }
     public void Chess()
     {
+        currentPlace = "Chess";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(12);
     }
     public void Library()
     {
+        currentPlace = "Library";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(13);
     }
     //Chapter 2 Room Loading
     public void FirstFloorCorridor()
     {
+        currentPlace = "1st Florr Corridor";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(4);
     }
     public void Archives()
     {
+        currentPlace = "Archive";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(15);
     }
     public void DeescalationRoom()
     {
+        currentPlace = "Deescalation Room";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(16);
     }
     public void MedicalBase()
     {
+        currentPlace = "Medical Base";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(17);
     }
     public void SingleRoomWindow()
     {
+        currentPlace = "Windowless Room 1";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(18);
     }
     public void SingleRoomWindowlessOne()
     {
+        currentPlace = "Windowless Room 2";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(19);
     }
     public void SingleRoomWindowlessTwo()
     {
+        currentPlace = "Windowless Room 3";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(20);
     }
     public void SingleRoomWindowlessThree()
     {
+        currentPlace = "Windowless Room 4";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(21);
     }
     //Chapter 3 Room Loading
     public void GroundFloorCorridor()
     {
+        currentPlace = "Reception";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(5);
     }
     public void Exit()
     {
+        currentPlace = "Exit";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(22);
     }
     public void Office()
     {
+        currentPlace = "Office";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(23);
     }
     public void Reception()
     {
+        currentPlace = "Awakening Room";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(24);
     }
     public void FendingMaschine()
     {
+        currentPlace = "Vending Machine";
+        SaveCurrentPlace();
         SceneManager.LoadSceneAsync(25);
     }
 
