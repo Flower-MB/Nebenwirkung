@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+//A class which manages all locations in the game and renews vars when you enter a new scene in Unity
 public class LocationManager : MonoBehaviour
 {
     public string currentPlace = "Awakening Room";
@@ -78,11 +78,11 @@ public class LocationManager : MonoBehaviour
         locationManager.DisplayText("Sicherungskasten", 1);
         locationManager.DisplayText("Sicherungskasten", 2);
         //Library
-        locationManager.AddLocation("Bücherei", new List<string> { "", "", "" });
+        locationManager.AddLocation("BÃ¼cherei", new List<string> { "", "", "" });
 
-        locationManager.DisplayText("Bücherei", 0);
-        locationManager.DisplayText("Bücherei", 1);
-        locationManager.DisplayText("Bücherei", 2);
+        locationManager.DisplayText("BÃ¼cherei", 0);
+        locationManager.DisplayText("BÃ¼cherei", 1);
+        locationManager.DisplayText("BÃ¼cherei", 2);
         //Lounge
         locationManager.AddLocation("Aufenthaltsraum", new List<string> { "", "", "" });
 
@@ -117,11 +117,11 @@ public class LocationManager : MonoBehaviour
         locationManager.DisplayText("Gang 1. Stock", 1);
         locationManager.DisplayText("Gang 1. Stock", 2);
         //Medical Base
-        locationManager.AddLocation("Stützpunkt", new List<string> { "", "", "" });
+        locationManager.AddLocation("StÃ¼tzpunkt", new List<string> { "", "", "" });
 
-        locationManager.DisplayText("Stützpunkt", 0);
-        locationManager.DisplayText("Stützpunkt", 1);
-        locationManager.DisplayText("Stützpunkt", 2);
+        locationManager.DisplayText("StÃ¼tzpunkt", 0);
+        locationManager.DisplayText("StÃ¼tzpunkt", 1);
+        locationManager.DisplayText("StÃ¼tzpunkt", 2);
         //Single Room Window
         locationManager.AddLocation("Einzelraum mit Fenster", new List<string> { "", "", "" });
 
@@ -162,11 +162,11 @@ public class LocationManager : MonoBehaviour
         locationManager.DisplayText("Ausgang", 1);
         locationManager.DisplayText("Ausgang", 2);
         //Office
-        locationManager.AddLocation("Büro", new List<string> { "", "", "" });
+        locationManager.AddLocation("BÃ¼ro", new List<string> { "", "", "" });
 
-        locationManager.DisplayText("Büro", 0);
-        locationManager.DisplayText("Büro", 1);
-        locationManager.DisplayText("Büro", 2);
+        locationManager.DisplayText("BÃ¼ro", 0);
+        locationManager.DisplayText("BÃ¼ro", 1);
+        locationManager.DisplayText("BÃ¼ro", 2);
         //Reception
         locationManager.AddLocation("Rezeption", new List<string> { "", "", "" });
 
@@ -174,14 +174,14 @@ public class LocationManager : MonoBehaviour
         locationManager.DisplayText("Rezeption", 1);
         locationManager.DisplayText("Rezeption", 2);
         //Vending Machine
-        locationManager.AddLocation("Getränke Automat", new List<string> { "", "", "" });
+        locationManager.AddLocation("GetrÃ¤nke Automat", new List<string> { "", "", "" });
 
-        locationManager.DisplayText("Getränke Automat", 0);
-        locationManager.DisplayText("Getränke Automat", 1);
-        locationManager.DisplayText("Getränke Automat", 2);
+        locationManager.DisplayText("GetrÃ¤nke Automat", 0);
+        locationManager.DisplayText("GetrÃ¤nke Automat", 1);
+        locationManager.DisplayText("GetrÃ¤nke Automat", 2);
         
 }*/
-
+    
     //Chapter 1 Room Loading
     public void AwakeningRoom()
     {
