@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-
+//A class which manages our settings (including a slider, which operates the volume of the music)
 public class Options : MonoBehaviour
 {
     //Sound Options with slider
