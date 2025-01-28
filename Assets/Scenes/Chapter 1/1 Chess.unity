@@ -648,7 +648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -385, y: -157}
+  m_AnchoredPosition: {x: -363.1, y: -157.6}
   m_SizeDelta: {x: 147.7832, y: 147.7832}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &300471973
@@ -820,7 +820,7 @@ RectTransform:
   m_Father: {fileID: 987284239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1764,7 +1764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &627720154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1849,6 +1849,7 @@ GameObject:
   - component: {fileID: 662203595}
   - component: {fileID: 662203594}
   - component: {fileID: 662203596}
+  - component: {fileID: 662203597}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1945,7 +1946,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  currentPlace: Awakening Room
+--- !u!114 &662203597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662203592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc29942057b19ce489b7ec7c5686175c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionTextBox: {fileID: 1656203334}
 --- !u!1 &690148443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378, y: 160}
+  m_AnchoredPosition: {x: 356.1, y: 147.5}
   m_SizeDelta: {x: 182.4724, y: 182.4724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710925993
@@ -2630,8 +2644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00030517578, y: -32.217}
+  m_SizeDelta: {x: -0.0004, y: 64.434}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943598097
 MonoBehaviour:
@@ -2653,7 +2667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3241318009653940317, guid: c8475ee9ebd8b2544b2901a96b95cca8, type: 3}
+  m_Sprite: {fileID: 6965851711005240467, guid: d8522385ded2fe34d8c5ea090d2f9a46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4570,7 +4584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -389.4016, y: 165.3}
+  m_AnchoredPosition: {x: -356.5, y: 147.8}
   m_SizeDelta: {x: 182.4724, y: 182.4724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672974632
@@ -6256,8 +6270,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1056422879015634889, guid: 01c9c3127cf29094c954dc157c5dd3d3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0309e03792e3a684d9db1a53e9ea245d, type: 3}
-  m_Resource: {fileID: 8300000, guid: 0309e03792e3a684d9db1a53e9ea245d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1f6c0b8f8a70954fa072eefe4b7696c, type: 3}
+  m_Resource: {fileID: 8300000, guid: e1f6c0b8f8a70954fa072eefe4b7696c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

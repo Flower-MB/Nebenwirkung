@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 11257616}
   - component: {fileID: 11257615}
   - component: {fileID: 11257617}
+  - component: {fileID: 11257618}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -227,7 +228,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  currentPlace: Awakening Room
+--- !u!114 &11257618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11257613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc29942057b19ce489b7ec7c5686175c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionTextBox: {fileID: 512455885}
 --- !u!1 &18847161
 GameObject:
   m_ObjectHideFlags: 0

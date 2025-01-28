@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4415095, g: 0.4415095, b: 0.4415095, a: 1}
+  m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3301,7 +3301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPlace: Awakening Room
-  descriptionText: {fileID: 0}
 --- !u!114 &1090858671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3820,8 +3819,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1056422879015634889, guid: 01c9c3127cf29094c954dc157c5dd3d3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0309e03792e3a684d9db1a53e9ea245d, type: 3}
-  m_Resource: {fileID: 8300000, guid: 0309e03792e3a684d9db1a53e9ea245d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1f6c0b8f8a70954fa072eefe4b7696c, type: 3}
+  m_Resource: {fileID: 8300000, guid: e1f6c0b8f8a70954fa072eefe4b7696c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

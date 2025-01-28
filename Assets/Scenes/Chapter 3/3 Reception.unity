@@ -631,7 +631,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 527332385441998522, guid: 40bf85d44e8806f4792966efe09af63a, type: 3}
+  m_Sprite: {fileID: 3166208261214616870, guid: 57bc839d741e5c84491e21b3e56b0e9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8855541110049088226, guid: 3c3c8c6580cdd42438948e0be436949b, type: 3}
+  m_Sprite: {fileID: 3166208261214616870, guid: 57bc839d741e5c84491e21b3e56b0e9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  currentPlace: Awakening Room
 --- !u!114 &399112489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,8 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc29942057b19ce489b7ec7c5686175c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: {fileID: 399112486}
-  currentMood: 0
+  descriptionTextBox: {fileID: 1040771775}
 --- !u!1 &438497729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6601468464164643115, guid: 8440ad0f983023046815851472726bff, type: 3}
+  m_Sprite: {fileID: 3166208261214616870, guid: 57bc839d741e5c84491e21b3e56b0e9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3217,7 +3216,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 399112488}
         m_TargetAssemblyTypeName: LocationManager, Assembly-CSharp
-        m_MethodName: FendingMaschine
+        m_MethodName: VendingMaschine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4040,7 +4039,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2893574219222803627, guid: d39a4567342ac344d8e768efede45b2c, type: 3}
+  m_Sprite: {fileID: 3166208261214616870, guid: 57bc839d741e5c84491e21b3e56b0e9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

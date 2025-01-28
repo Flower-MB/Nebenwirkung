@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.SceneManagement;
 using UnityEditor.SearchService;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     public TextMeshProUGUI descriptionTextBox;
     private string descriptiontext = "";
+    AccessManager accessManager = new AccessManager();
 
     public void changeTextBox()
     {
@@ -19,31 +21,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
         switch (place)
         {
             //The Elevator is first locked and eventually unlocked
-            case "Elevator*":
-                switch (currentMood)
-                {
-                    case 1:
-                        descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Die Knöpfe zu \"Keller\" \"Erdgeschoss\" und \"1. Stock\" leuchten nicht, wenn ich sie drücke. Vielleicht ist er kapput?";
-                        break;
-                    case 2:
-                        descriptiontext = "Wer auch immer ihn manipuliert hat, kann mir vielleicht meine Fragen beantworten.";
-                        break;
-                    case 3:
-                        descriptiontext = "Dieses Miststück habe ich immer noch immer nicht zum Laufen gebracht.";
-                        break;
-                }
-                break;
             case "Elevator":
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Erstaunlich, dass er überhaupt noch fährt.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Erstaunlich, dass er überhaupt noch fährt."; }
+                        else { descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Die Knöpfe zu \"Keller\" \"Erdgeschoss\" und \"1. Stock\" leuchten nicht, wenn ich sie drücke. Vielleicht ist er kapput?"; }
                         break;
                     case 2:
-                        descriptiontext = "Die Seile an denen er hängt, quietschen und ächzen. Fast so, als wollten sie ihn in fallenlassen.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Die Seile an denen er hängt, quietschen und ächzen. Fast so, als wollten sie ihn in fallenlassen."; }
+                        else { descriptiontext = "Wer auch immer ihn manipuliert hat, kann mir vielleicht meine Fragen beantworten."; }
                         break;
                     case 3:
-                        descriptiontext = "Ich glaube diesem Gefährt erging es genauso wie mir. Wir beide sind zu voll beladen und werden irgendwann abstürzen.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ich glaube diesem Gefährt erging es genauso wie mir. Wir beide sind zu voll beladen und werden irgendwann abstürzen."; }
+                        descriptiontext = "Dieses Miststück habe ich immer noch immer nicht zum Laufen gebracht.";
                         break;
                 }
                 break;
@@ -246,33 +237,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 }
                 break;
             //The Archive is first locked and eventually unlocked
-            case "Archive*":
-                switch (currentMood)
-                {
-                    case 1:
-                        descriptiontext = "Archiv";
-                        ;
-                        break;
-                    case 2:
-                        descriptiontext = "Archiv - Dokumentation";
-                        break;
-                    case 3:
-                        descriptiontext = "Archiv - Dokumentation für Psychiatrie";
-                        break;
-                }
-                break;
             case "Archive":
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Verstaubte Aktenschränke.";
-                        ;
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Verstaubte Aktenschränke."; }
+                        else { descriptiontext = "\"Archiv\""; }
                         break;
                     case 2:
-                        descriptiontext = "Irgendjemand hat die Seiten rausgerissen und auf einen Haufen geworfen. Fast so, als wollte jemand ein Feuer machen.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Irgendjemand hat die Seiten rausgerissen und auf einen Haufen geworfen. Fast so, als wollte jemand ein Feuer machen."; }
+                        else { descriptiontext = "\"Archiv - Dokumentation\""; }
                         break;
                     case 3:
-                        descriptiontext = "Ich rieche Benzin. Wo ist nur mein Feuerzeug?";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ich rieche Benzin. Wo ist nur mein Feuerzeug?"; }
+                        descriptiontext = "\"Archiv - Dokumentation für Psychiatrie\"";
                         break;
                 }
                 break;
@@ -292,11 +270,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 }
                 break;
             //Chapter 3
-            case "Reception":
+            case "Ground Floor Corridor":
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "\"The most realistic Escape-Room: 'Sideeffects guaranteed'\" Hier habe ich bezahlt, um den Spaß meines Lebens zu haben.";
+                        descriptiontext = "Endlich komme ich dem Ausgang nahe!";
                         ;
                         break;
                     case 2:
@@ -307,34 +285,37 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         break;
                 }
                 break;
-            //The Office is first locked and eventually unlocked
-            case "Office*":
+
+            case "Reception":
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "\"Zutritt nur für Personal\"";
+                        descriptiontext = "\"The most realistic Escape-Room: 'Sideeffects guaranteed'\" Hier habe ich bezahlt, um den Spaß meines Lebens zu haben.";
                         ;
                         break;
                     case 2:
-                        descriptiontext = "\"Zutritt nur für Personal der psychiatrischen Einrichtung\"";
+                        descriptiontext = "Ich kann mich komischerweise nicht daran erinnern, bezahlt zu haben!";
                         break;
                     case 3:
-                        descriptiontext = "\"Zutritt nur für Mitverschwörer\"";
+                        descriptiontext = "An der Rezeption stehen hagere Personen sie cheken gerade aus. Jetzt sind sie weg!";
                         break;
                 }
                 break;
+            //The Office is first locked and eventually unlocked
             case "Office":
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Ein langweiliger, geordneter Schreibtisch. Dahinter mehrere Bildschirme, auf denen ich mehrere Teilnehmer entdecke.";
-                        ;
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ein langweiliger, geordneter Schreibtisch. Dahinter mehrere Bildschirme, auf denen ich mehrere Teilnehmer entdecke."; }
+                        else { descriptiontext = "\"Zutritt nur für Personal\""; }
                         break;
                     case 2:
-                        descriptiontext = "Hinter einem bulligen Typen sehe ich eine Wand mit Überwachungsbildschirmen.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Hinter einem bulligen Typen sehe ich eine Wand mit Überwachungsbildschirmen."; }
+                        else { descriptiontext = "\"Zutritt nur für Personal der psychiatrischen Einrichtung\""; }
                         break;
                     case 3:
-                        descriptiontext = "Eine Glatzkopf in einer Uniform, an dessen Gürtel eine Waffe hängt.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Eine Glatzkopf in einer Uniform, an dessen Gürtel eine Waffe hängt."; }
+                        descriptiontext = "\"Zutritt nur für Mitverschwörer\"";
                         break;
                 }
                 break;

@@ -290,7 +290,7 @@ public class LocationManager : MonoBehaviour
     //Chapter 3 Room Loading
     public void GroundFloorCorridor()
     {
-        currentPlace = "Reception";
+        currentPlace = "Ground Floor Corridor";
         SaveCurrentPlace();
         SceneManager.LoadSceneAsync(5);
     }
@@ -308,11 +308,11 @@ public class LocationManager : MonoBehaviour
     }
     public void Reception()
     {
-        currentPlace = "Awakening Room";
+        currentPlace = "Reception";
         SaveCurrentPlace();
         SceneManager.LoadSceneAsync(24);
     }
-    public void FendingMaschine()
+    public void VendingMaschine()
     {
         currentPlace = "Vending Machine";
         SaveCurrentPlace();

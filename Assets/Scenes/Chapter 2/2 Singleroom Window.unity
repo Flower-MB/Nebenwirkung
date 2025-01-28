@@ -5213,7 +5213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zimmer mit \nFenster 1"
+  m_text: "Zimmer ohne \nFenster"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4bd0d97d0c8c52439f31abf5f18c968, type: 2}
   m_sharedMaterial: {fileID: -3720703531438402523, guid: e4bd0d97d0c8c52439f31abf5f18c968, type: 2}
@@ -6282,6 +6282,7 @@ GameObject:
   - component: {fileID: 1727481966}
   - component: {fileID: 1727481965}
   - component: {fileID: 1727481967}
+  - component: {fileID: 1727481968}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -6378,7 +6379,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa36faa914e0b14a89fd37bf9a662ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: {fileID: 0}
+  currentPlace: Awakening Room
+--- !u!114 &1727481968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727481963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc29942057b19ce489b7ec7c5686175c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionTextBox: {fileID: 853184459}
 --- !u!1 &1788868607
 GameObject:
   m_ObjectHideFlags: 0
