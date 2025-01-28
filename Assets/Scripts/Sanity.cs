@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
-
+//A class which manages the var Sanity. Moreover, how we get and lose it.
+//Depending on its value it affects the font
 public class Sanity : MonoBehaviour
 {
     //Sanity
