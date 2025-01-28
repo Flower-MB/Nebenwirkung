@@ -2,7 +2,7 @@ using TMPro;
 using UnityEditor.SceneManagement;
 using UnityEditor.SearchService;
 using UnityEngine;
-
+//A class which manages the current scene description based on the sanity value
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     public TextMeshProUGUI descriptionTextBox;
@@ -20,21 +20,22 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // A nested switch statement containing two parameters: place & currentMood
         switch (place)
         {
+            //Some places have to states: locked and unlocked. To show the correct description we check for this inside the nested switch-statements
             //The Elevator is first locked and eventually unlocked
             case "Elevator":
                 switch (currentMood)
                 {
                     case 1:
-                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Erstaunlich, dass er überhaupt noch fährt."; }
-                        else { descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Die Knöpfe zu \"Keller\" \"Erdgeschoss\" und \"1. Stock\" leuchten nicht, wenn ich sie drücke. Vielleicht ist er kapput?"; }
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Erstaunlich, dass er Ã¼berhaupt noch fÃ¤hrt."; }
+                        else { descriptiontext = "Ein Aufzug, der in die Jahre gekommen ist. Die KnÃ¶pfe zu \"Keller\" \"Erdgeschoss\" und \"1. Stock\" leuchten nicht, wenn ich sie drÃ¼cke. Vielleicht ist er kapput?"; }
                         break;
                     case 2:
-                        if (accessManager.hasRepairedElevator) { descriptiontext = "Die Seile an denen er hängt, quietschen und ächzen. Fast so, als wollten sie ihn in fallenlassen."; }
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Die Seile an denen er hÃ¤ngt, quietschen und Ã¤chzen. Fast so, als wollten sie ihn in fallenlassen."; }
                         else { descriptiontext = "Wer auch immer ihn manipuliert hat, kann mir vielleicht meine Fragen beantworten."; }
                         break;
                     case 3:
-                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ich glaube diesem Gefährt erging es genauso wie mir. Wir beide sind zu voll beladen und werden irgendwann abstürzen."; }
-                        descriptiontext = "Dieses Miststück habe ich immer noch immer nicht zum Laufen gebracht.";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Ich glaube diesem GefÃ¤hrt erging es genauso wie mir. Wir beide sind zu voll beladen und werden irgendwann abstÃ¼rzen."; }
+                        descriptiontext = "Dieses MiststÃ¼ck habe ich immer noch immer nicht zum Laufen gebracht.";
                         break;
                 }
                 break;
@@ -49,7 +50,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         descriptiontext = "Warum kommt keiner, um mich abzuholen?";
                         break;
                     case 3:
-                        descriptiontext = "Vielleicht hätte ich mich an den Schläuchen aufhängen sollen.";
+                        descriptiontext = "Vielleicht hÃ¤tte ich mich an den SchlÃ¤uchen aufhÃ¤ngen sollen.";
                         break;
                 }
                 break;
@@ -60,10 +61,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         descriptiontext = "Ich sehe nichts. Es riecht nach abgestandener Luft und meine Schritte verhallen.";
                         break;
                     case 2:
-                        descriptiontext = "Schwarz. Endloses, undurchdringliches, nervtötendes Schwarz.";
+                        descriptiontext = "Schwarz. Endloses, undurchdringliches, nervtÃ¶tendes Schwarz.";
                         break;
                     case 3:
-                        descriptiontext = "Schwarz. Trostloses, flüsterndes, totes Schwarz.";
+                        descriptiontext = "Schwarz. Trostloses, flÃ¼sterndes, totes Schwarz.";
                         break;
                 }
                 break;
@@ -88,10 +89,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         descriptiontext = "Der Elektrokasten.";
                         break;
                     case 2:
-                        descriptiontext = "Ich habe genug Kurzschlüsse selbst ausgelöst und lasse besser die Finger davon.";
+                        descriptiontext = "Ich habe genug KurzschlÃ¼sse selbst ausgelÃ¶st und lasse besser die Finger davon.";
                         break;
                     case 3:
-                        descriptiontext = "Meine Hände wollen nach diesem greifen und die gleichen Pole zusammenführen.";
+                        descriptiontext = "Meine HÃ¤nde wollen nach diesem greifen und die gleichen Pole zusammenfÃ¼hren.";
                         break;
                 }
                 break;
@@ -99,7 +100,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Der Geruch von Desinfektionsmittel liegt in der Luft - die Böden scheinen frisch gewaschen.";
+                        descriptiontext = "Der Geruch von Desinfektionsmittel liegt in der Luft - die BÃ¶den scheinen frisch gewaschen.";
                         break;
                     case 2:
                         descriptiontext = "Hier hat sie immer dieser Konzerte gegeben, bis sie die Saiten mit einer Zange durchgezwickt hat.";
@@ -127,10 +128,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Jemand hat inmitten der Partie aufgehört.";
+                        descriptiontext = "Jemand hat inmitten der Partie aufgehÃ¶rt.";
                         break;
                     case 2:
-                        descriptiontext = "Die Partie hätte in ein paar Zügen geendet.";
+                        descriptiontext = "Die Partie hÃ¤tte in ein paar ZÃ¼gen geendet.";
                         break;
                     case 3:
                         descriptiontext = "Ich verstehe, warum jemand in dieser Position nicht weiterspielen wollte.";
@@ -144,7 +145,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         descriptiontext = "Hier habe ich immer meine Ruhe gefunden.";
                         break;
                     case 2:
-                        descriptiontext = "Verstaubtes Wissen, dass uns immer wieder erklärt, warum wir nichts wissen.";
+                        descriptiontext = "Verstaubtes Wissen, dass uns immer wieder erklÃ¤rt, warum wir nichts wissen.";
                         break;
                     case 3:
                         descriptiontext = "Hier habe ich meine letzte Ruhe gefunden.";
@@ -170,7 +171,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Eine Tür.";
+                        descriptiontext = "Eine TÃ¼r.";
                         break;
                     case 2:
                         descriptiontext = "Das Messingschild \"1\" ist heruntergefallen.";
@@ -184,13 +185,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Eine Tür.";
+                        descriptiontext = "Eine TÃ¼r.";
                         break;
                     case 2:
-                        descriptiontext = "Das Messingschild \"2\" ist noch an seiner ursprünglichen Position.";
+                        descriptiontext = "Das Messingschild \"2\" ist noch an seiner ursprÃ¼nglichen Position.";
                         break;
                     case 3:
-                        descriptiontext = "Die Tür ist einen Spalt offen und dahinter höre ich röchelnde Laute.";
+                        descriptiontext = "Die TÃ¼r ist einen Spalt offen und dahinter hÃ¶re ich rÃ¶chelnde Laute.";
                         break;
                 }
                 break;
@@ -198,7 +199,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Eine Tür.";
+                        descriptiontext = "Eine TÃ¼r.";
                         break;
                     case 2:
                         descriptiontext = "Das Messingschild \"3\" scheint sich nur noch an einen Nageln zu klammern.";
@@ -212,10 +213,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Irgendwas hat die Tür zerfetzt. Sie liegt tief in den Angeln.";
+                        descriptiontext = "Irgendwas hat die TÃ¼r zerfetzt. Sie liegt tief in den Angeln.";
                         break;
                     case 2:
-                        descriptiontext = "Das Messingschild an der Tür ist nicht existent. Das Holz wurde von innen zerfetzt, was nur bedeuten kann, dass da jemand hinausmöchte.";
+                        descriptiontext = "Das Messingschild an der TÃ¼r ist nicht existent. Das Holz wurde von innen zerfetzt, was nur bedeuten kann, dass da jemand hinausmÃ¶chte.";
                         break;
                     case 3:
                         descriptiontext = "Unter dem Spalt sehe ich Licht, dass aus und wieder angeht.";
@@ -226,7 +227,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Diese Tür hat keine Klinke. Ein leises Murmeln meine ich aus dem Schlüsselloch zu vernehmen.";
+                        descriptiontext = "Diese TÃ¼r hat keine Klinke. Ein leises Murmeln meine ich aus dem SchlÃ¼sselloch zu vernehmen.";
                         break;
                     case 2:
                         descriptiontext = "Jemand ruft meinen Namen.";
@@ -241,7 +242,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        if (accessManager.hasRepairedElevator) { descriptiontext = "Verstaubte Aktenschränke."; }
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Verstaubte AktenschrÃ¤nke."; }
                         else { descriptiontext = "\"Archiv\""; }
                         break;
                     case 2:
@@ -250,7 +251,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                         break;
                     case 3:
                         if (accessManager.hasRepairedElevator) { descriptiontext = "Ich rieche Benzin. Wo ist nur mein Feuerzeug?"; }
-                        descriptiontext = "\"Archiv - Dokumentation für Psychiatrie\"";
+                        descriptiontext = "\"Archiv - Dokumentation fÃ¼r Psychiatrie\"";
                         break;
                 }
                 break;
@@ -290,7 +291,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "\"The most realistic Escape-Room: 'Sideeffects guaranteed'\" Hier habe ich bezahlt, um den Spaß meines Lebens zu haben.";
+                        descriptiontext = "\"The most realistic Escape-Room: 'Sideeffects guaranteed'\" Hier habe ich bezahlt, um den SpaÃŸ meines Lebens zu haben.";
                         ;
                         break;
                     case 2:
@@ -307,15 +308,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 {
                     case 1:
                         if (accessManager.hasRepairedElevator) { descriptiontext = "Ein langweiliger, geordneter Schreibtisch. Dahinter mehrere Bildschirme, auf denen ich mehrere Teilnehmer entdecke."; }
-                        else { descriptiontext = "\"Zutritt nur für Personal\""; }
+                        else { descriptiontext = "\"Zutritt nur fÃ¼r Personal\""; }
                         break;
                     case 2:
-                        if (accessManager.hasRepairedElevator) { descriptiontext = "Hinter einem bulligen Typen sehe ich eine Wand mit Überwachungsbildschirmen."; }
-                        else { descriptiontext = "\"Zutritt nur für Personal der psychiatrischen Einrichtung\""; }
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Hinter einem bulligen Typen sehe ich eine Wand mit Ãœberwachungsbildschirmen."; }
+                        else { descriptiontext = "\"Zutritt nur fÃ¼r Personal der psychiatrischen Einrichtung\""; }
                         break;
                     case 3:
-                        if (accessManager.hasRepairedElevator) { descriptiontext = "Eine Glatzkopf in einer Uniform, an dessen Gürtel eine Waffe hängt."; }
-                        descriptiontext = "\"Zutritt nur für Mitverschwörer\"";
+                        if (accessManager.hasRepairedElevator) { descriptiontext = "Eine Glatzkopf in einer Uniform, an dessen GÃ¼rtel eine Waffe hÃ¤ngt."; }
+                        descriptiontext = "\"Zutritt nur fÃ¼r MitverschwÃ¶rer\"";
                         break;
                 }
                 break;
@@ -323,13 +324,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Ein simpler Snackautomat, der regelmäßig nachgefüllt wird. Ich kann einige gewöhnliche Snacks erkennen.";
+                        descriptiontext = "Ein simpler Snackautomat, der regelmÃ¤ÃŸig nachgefÃ¼llt wird. Ich kann einige gewÃ¶hnliche Snacks erkennen.";
                         break;
                     case 2:
-                        descriptiontext = "Ein mysteriöser Snackautomat, der schon lange nicht mehr nachgefüllt wurde.";
+                        descriptiontext = "Ein mysteriÃ¶ser Snackautomat, der schon lange nicht mehr nachgefÃ¼llt wurde.";
                         break;
                     case 3:
-                        descriptiontext = "Ein interessanter Snackautomat, in dem man abgetrennte Körperteile kaufen kann. Der Verwesungsgeruch steigt in meine Nase.";
+                        descriptiontext = "Ein interessanter Snackautomat, in dem man abgetrennte KÃ¶rperteile kaufen kann. Der Verwesungsgeruch steigt in meine Nase.";
                         break;
                 }
                 break;
@@ -337,13 +338,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
                 switch (currentMood)
                 {
                     case 1:
-                        descriptiontext = "Endlich Draußen!";
+                        descriptiontext = "Endlich DrauÃŸen!";
                         break;
                     case 2:
                         descriptiontext = "Ich lebe noch!";
                         break;
                     case 3:
-                        descriptiontext = "Unmöglich!";
+                        descriptiontext = "UnmÃ¶glich!";
                         break;
                 }
                 break;
